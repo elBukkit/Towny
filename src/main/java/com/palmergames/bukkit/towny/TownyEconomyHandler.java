@@ -218,7 +218,7 @@ public class TownyEconomyHandler {
 		case REGISTER:
 			MethodAccount registerAccount = (MethodAccount) getEconomyAccount(accountName);
 			if (registerAccount != null)
-				return registerAccount.balance(world);
+				return registerAccount.balance();
 
 			break;
 
@@ -273,7 +273,7 @@ public class TownyEconomyHandler {
 		case REGISTER:
 			MethodAccount registerAccount = (MethodAccount) getEconomyAccount(accountName);
 			if (registerAccount != null)
-				return registerAccount.subtract(amount, world);
+				return registerAccount.subtract(amount);
 			break;
 
 		case VAULT:
@@ -313,7 +313,7 @@ public class TownyEconomyHandler {
 		case REGISTER:
 			MethodAccount registerAccount = (MethodAccount) getEconomyAccount(accountName);
 			if (registerAccount != null)
-				return registerAccount.add(amount, world);
+				return registerAccount.add(amount);
 			break;
 
 		case VAULT:
@@ -345,7 +345,7 @@ public class TownyEconomyHandler {
 		case REGISTER:
 			MethodAccount registerAccount = (MethodAccount) getEconomyAccount(accountName);
 			if (registerAccount != null)
-				return registerAccount.set(amount, world);
+				return registerAccount.set(amount);
 			break;
 
 		case VAULT:
